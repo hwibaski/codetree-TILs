@@ -5,4 +5,4 @@ const input = fs.readFileSync(0).toString().trim().split(' ').map(el => Number(e
 const sum = input.reduce((prev, cur) => prev + cur, 0);
 
 console.log(sum);
-console.log(Math.ceil(sum / input.length));
+console.log(Math.floor(sum / input.length));
