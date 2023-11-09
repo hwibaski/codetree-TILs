@@ -4,5 +4,5 @@ const [a, b] = fs.readFileSync(0).toString().trim().split(' ').map(el => parseIn
 
 console.log(a + b);
 console.log(a - b);
-console.log(Math.floor(a / b));
+console.log(Math.floor(a / b)); // console.log(parseInt(a / b))
 console.log(a % b);
