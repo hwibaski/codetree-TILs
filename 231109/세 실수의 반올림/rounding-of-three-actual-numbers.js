@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-const input = fs.readFileSync(0).toString().split('\n').map(el => Number(el));
+const [a, b, c] = fs.readFileSync(0).toString().split('\n').map(el => Number(el));
 
-input.forEach(el => {
-    console.log(el.toFixed(3));
-})
+console.log(a.toFixed(3));
+console.log(b.toFixed(3));
+console.log(c.toFixed(3));
