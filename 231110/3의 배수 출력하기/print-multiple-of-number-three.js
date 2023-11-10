@@ -4,7 +4,7 @@ const input = Number(fs.readFileSync(0).toString());
 
 let i = 3;
 let res = "";
-while (i < 28) {
+while (i <= input) {
     if (i % 3 == 0) {
         res += (i + " ");
     }
