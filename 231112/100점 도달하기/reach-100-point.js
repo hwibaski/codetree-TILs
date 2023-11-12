@@ -2,8 +2,6 @@ const fs = require('fs');
 const input = fs.readFileSync(0).toString().trim();
 const n = Number(input);
 
-const hund = 100;
-
 let res = "";
 for (let i = n; i <= 100; i++) {
     if (i < 60) {
