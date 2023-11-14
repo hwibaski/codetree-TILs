@@ -4,6 +4,7 @@ const n = Number(input);
 
 for (let i = 0; i < n; i++) {
     let str = '';
+    // j < n - i - 1
     for (let j = 0; j <= n - (2 * i) + (n- 3); j++) {
         str += ' ';
     }
