@@ -11,7 +11,7 @@ for (let i = 0; i < n; i++) {
             str += cnt + ' ';
         }
     } else {
-        cnt = cnt * 2 + 1;
+        cnt = cnt + n + 1;
         for (let j = 0; j < n; j++) {
             cnt--;
             str += cnt + ' ';
