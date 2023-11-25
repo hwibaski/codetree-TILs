@@ -10,5 +10,4 @@ for (let i = 1; i <= n; i++) {
         res *= j;
     }
     console.log(res);
-    res = 1;
 }
