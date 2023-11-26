@@ -11,11 +11,11 @@ console.log(avg);
 console.log(calGrade(avg));
 
 function calGrade(avgScore) {
-    if (avgScore > 4) {
+    if (avgScore >= 4) {
         return 'Perfect';
     }
 
-    if (avgScore > 3) {
+    if (avgScore >= 3) {
         return 'Good';
     }
 
