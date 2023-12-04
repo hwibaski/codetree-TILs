@@ -14,3 +14,5 @@ for (let i = 0; i < b.length; i++) {
         break;
     }
 }
+
+console.log('Yes');
