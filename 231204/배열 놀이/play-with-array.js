@@ -5,7 +5,7 @@ const [n, q] = input[0].split(' ').map(Number);
 const elems = input[1].split(' ').map(Number);
 
 for (let i = 0; i < q; i++) {
-    const input2 = input[i+ 2].split(' ').map(Number);
+    const input2 = input[i + 2].split(' ').map(Number);
 
     if (input2[0] === 1) {
         console.log(input2[1]);
