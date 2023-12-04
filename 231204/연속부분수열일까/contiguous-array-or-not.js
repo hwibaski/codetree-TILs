@@ -20,14 +20,14 @@ for (let j = 0; j < indexes.length; j++) {
         if (a[i+ start] && a[i + start] !== b[i]) {
             // console.log('No');
             result = false;
-            // return;
+            break;
         }
+    }
+
+    if (result) {
+        console.log('Yes');
+        return 0;
     }
 }
 
-
-if (result) {
-    console.log('Yes');
-} else {
-    console.log('No');
-}
+console.log('No');
