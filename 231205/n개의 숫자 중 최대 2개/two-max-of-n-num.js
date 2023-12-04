@@ -10,7 +10,6 @@ for (let i = 0; i < n - 1; i++) {
     let maxValIdx = 0;
     for (let j = i + 1; j < n; j++) {
         if (el[j] >= maxVal) {
-        
             maxVal = el[j];
             maxValIdx = j;
         } else {
@@ -23,11 +22,6 @@ for (let i = 0; i < n - 1; i++) {
     let temp = el[i];
     el[i] = maxVal;
     el[maxValIdx] = temp;
-//     console.log('el :', el);
-//     console.log('i :', i);
-//     console.log('maxVal :', maxVal);
-//     console.log('idx :', maxValIdx);
-//     console.log();
 }
 
 console.log(el[0], el[1]);
