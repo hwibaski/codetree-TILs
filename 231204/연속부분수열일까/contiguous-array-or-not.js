@@ -4,13 +4,30 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 const a = input[1].split(' ').map(Number);
 const b = input[2].split(' ').map(Number);
 
-const start = a.indexOf(b[0]);
+let result = true;
+const indexes = [];
+for (let i = 0; i < a.length; i++) {
+    if (a[i] === b[0]) indexes.push(i);
+}
 
-for (let i = 0; i < b.length; i++) {
-    if (a[i + start] !== b[i]) {
-        console.log('No');
-        return;
+for (let j = 0; j < indexes.length; j++) {
+
+    const start = indexes[j];
+    // console.log(start);
+    result = true;
+    for (let i = 0; i < b.length; i++) {
+        // console.log(a[i + start], b[i]);
+        if (a[i+ start] && a[i + start] !== b[i]) {
+            // console.log('No');
+            result = false;
+            // return;
+        }
     }
 }
 
-console.log('Yes');
+
+if (result) {
+    console.log('Yes');
+} else {
+    console.log('No');
+}
