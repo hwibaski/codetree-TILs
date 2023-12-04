@@ -11,7 +11,7 @@ for (let i = 0; i < b.length; i++) {
     // console.log(a[i + start], b[i]);
     if (a[i + start] !== b[i]) {
         console.log('No');
-        break;
+        return;
     }
 }
 
