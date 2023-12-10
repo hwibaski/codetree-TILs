@@ -13,7 +13,7 @@ let max = -1;
 
 for (let i = 0; i < arr.length; i++) {
     for (let j = i; j < arr.length; j++) {
-        if (arr[j] - arr[i] > 0 && arr[j] - arr[i] > max) {
+        if (arr[j] - arr[i] >= 0 && arr[j] - arr[i] > max) {
             max = arr[j] - arr[i];
         }
     }
