@@ -19,7 +19,9 @@ function calCnt(a, b) {
 function hasThreeSixNine(n) {
     const strNum = n.toString();
 
-    return Array.from(strNum).some(digit => digit === '3' || digit === '6' || digit === '9');
+    return Array.from(strNum)
+                .map(Number)
+                .some(digit => digit === 3 || digit === 6 || digit === 9);
 }
 
 function isThreeMultiple(n) {
