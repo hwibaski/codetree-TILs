@@ -11,7 +11,7 @@ const selector = {
     '*': () => `${n} ${op} ${m} = ${multiply(n, m)}`
 }
 
-console.log(selector[op]() ?? 'False');
+console.log(selector[op]?.() ?? 'False');
 
 function add(a, b) {
     return a + b;
