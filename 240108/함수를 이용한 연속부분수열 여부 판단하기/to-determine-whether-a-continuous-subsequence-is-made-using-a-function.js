@@ -6,13 +6,15 @@ const b = input[2].split(' ').map(Number);
 
 const temp = findIndexSameWithSecondArrayFirstEl(a, b[0]);
 
-if (!temp) {
+if (temp.length === 0) {
     console.log('No');
     return;
 }
 
 let result = true;
 let j = 0;
+
+// console.log(temp);
 
 for (const el of temp) {
     if (el > b.length) continue;
@@ -22,14 +24,14 @@ for (const el of temp) {
             break;
         }
 
-        // console.log(a[i], b[j]);
+        console.log(a[i], b[j]);
         j++;
 
-        // if (!(a[i] === b[i - start])) {
-        //     console.log('here', a[i], b[i - start]);
-        //     result = false;
-        //     break;
-        // }
+        if (!(a[i] === b[j])) {
+            console.log('here', a[i], b[j]);
+            result = false;
+            break;
+        }
     }
 }
 
