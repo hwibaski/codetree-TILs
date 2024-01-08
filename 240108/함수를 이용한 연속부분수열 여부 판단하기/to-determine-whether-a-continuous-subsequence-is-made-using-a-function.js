@@ -1,49 +1,32 @@
-const fs = require('fs');
-const input = fs.readFileSync(0).toString().trim().split('\n');
+const fs = require("fs");
+let input = fs.readFileSync(0).toString().trim().split("\n");
 
-const a = input[1].split(' ').map(Number);
-const b = input[2].split(' ').map(Number);
+let [n1, n2] = input[0].split(" ").map(Number);
+let a = input[1].split(" ").map(Number);
+let b = input[2].split(" ").map(Number);
 
-const temp = findIndexSameWithSecondArrayFirstEl(a, b[0]);
-
-if (temp.length === 0) {
-    console.log('No');
-    return;
+if (isSubsequence()) {
+    console.log("Yes");
+} else {
+    console.log("No");
 }
 
-let result = true;
-let j = 0;
-
-// console.log(temp);
-
-for (const el of temp) {
-    if (el > b.length) continue;
-    for (let i = el; i < el + b.length; i++) {
-        if (!b) {
-            result = false;
-            break;
-        }
-
-        // console.log(a[i], b[j]);
-        j++;
-
-        if (!(a[i] === b[j])) {
-            // console.log('here', a[i], b[j]);
-            result = false;
-            break;
+function isSubsequence() {
+    for (let i = 0; i < n1 - n2 + 1; i++) {
+        if (isSame(i)) {
+            return true;
         }
     }
+    
+    return false;
 }
 
-console.log(result === true ? 'Yes' : 'No');
-
-function findIndexSameWithSecondArrayFirstEl(a, firstElOfB) {
-    const index = [];
-    const start = a.indexOf(firstElOfB);
-
-    if (start !== -1) {
-        index.push(start);
+function isSame(n) {
+    for (let i = 0; i < n2; i++) {
+        if (a[i + n] !== b[i]) {
+            return false;
+        }
     }
 
-    return index;
+    return true;
 }
