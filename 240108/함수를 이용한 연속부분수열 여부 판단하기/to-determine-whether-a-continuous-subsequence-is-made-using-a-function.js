@@ -27,11 +27,11 @@ for (const el of temp) {
         // console.log(a[i], b[j]);
         j++;
 
-        // if (!(a[i] === b[j])) {
-        //     console.log('here', a[i], b[j]);
-        //     result = false;
-        //     break;
-        // }
+        if (!(a[i] === b[j])) {
+            // console.log('here', a[i], b[j]);
+            result = false;
+            break;
+        }
     }
 }
 
