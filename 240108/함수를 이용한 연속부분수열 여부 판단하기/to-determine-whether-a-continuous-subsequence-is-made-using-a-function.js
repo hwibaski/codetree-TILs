@@ -24,7 +24,7 @@ for (const el of temp) {
             break;
         }
 
-        console.log(a[i], b[j]);
+        // console.log(a[i], b[j]);
         j++;
 
         // if (!(a[i] === b[j])) {
