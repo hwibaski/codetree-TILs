@@ -4,6 +4,10 @@ const input = fs.readFileSync(0).toString();
 const nums = input.split('\n')[1].split(' ').map(Number);
 
 function multipleLCM(arr) {
+    if (arr.length === 1) {
+        return arr[0];
+    }
+
     if (arr.length === 2) {
         return lcm(arr[0], arr[1]);
     } else {
@@ -20,6 +24,7 @@ function lcm(a, b) {
 }
 
 function gcd(a, b) {
+    // console.log(a, b);
     if (b === 0) {
         return a;
     }
