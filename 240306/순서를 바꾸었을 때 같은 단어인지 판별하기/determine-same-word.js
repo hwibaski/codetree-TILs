@@ -10,16 +10,12 @@ if (a.length !== b.length) {
     process.exit(0);
 }
 
-const aSorted = a.split('').sort();
-const bSorted = b.split('').sort();
+const aSorted = a.split('').sort().join();
+const bSorted = b.split('').sort().join();
 
-// console.log(aSorted);
-
-for (let i = 0; i < aSorted.length; i++) {
-    if (aSorted[i] !== bSorted[i]) {
-        console.log('No');
-        process.exit(0);
-    }
+if (aSorted !== bSorted) {
+    console.log('No');
+    process.exit(0);
+} else {
+    console.log('Yes');
 }
-
-console.log('Yes');
