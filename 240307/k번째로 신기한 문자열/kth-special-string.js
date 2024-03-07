@@ -3,7 +3,6 @@ const fs = require('fs');
 const lines = fs.readFileSync(0).toString().trim().split('\n');
 const [first, ...words] = lines;
 const tempInput = first.split(' ');
-const n = Number(tempInput[0]);
 const k = Number(tempInput[1]);
 const t = tempInput[2]
 
