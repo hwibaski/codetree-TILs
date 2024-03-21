@@ -10,7 +10,7 @@ class Data {
     }
 
     print() {
-        console.log(`${this.date} ${this.day} ${this.weather}`);
+        console.log(`${this.date} ${this.day} ${this.weather}`.trim());
     }
 
     dateStringToDateTime() {
@@ -25,7 +25,7 @@ for (const el of rest) {
     temp.push(new Data(date, day, weather));
 }
 
-const result = temp.sort((a, b) => a.dateStringToDateTime - b.dateStringToDateTime)
+const result = temp.sort((a, b) => a.dateStringToDateTime() - b.dateStringToDateTime())
                     .find(data => data.weather === 'Rain');
                     
 result.print();
