@@ -26,7 +26,7 @@ students.sort((a, b) => {
         return a.number - b.number;
     }
     
-    if (a.height !== b.height) {
+    if (a.height === b.height) {
         return b.weight - a.weight;
     }
 
