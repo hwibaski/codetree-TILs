@@ -15,7 +15,7 @@ class Person {
 
 const students = lines.map(l => {
     const [name, height, weight] = l.trim().split(' ');
-    return new Person(name, Number(height), parseFloat(weight));
+    return new Person(name, Number(height), Number(weight).toFixed(1));
 })
 
 console.log('name');
