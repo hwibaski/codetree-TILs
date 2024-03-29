@@ -12,10 +12,6 @@ class Student {
     print() {
         console.log(`${this.name} ${this.height} ${this.weight}`);
     }
-
-    hasSameHeight(student) {
-        this.height === student.height;
-    }
 }
 
 lines.map(l => {
