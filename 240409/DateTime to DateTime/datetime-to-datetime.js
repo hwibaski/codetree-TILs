@@ -10,6 +10,12 @@ class DateTime {
     }
 
     calElapsedTime(before) {
+        // const result = this.isFasterThan111111(before);
+        // console.log(result);
+        // if (this.isFasterThan111111(before)) {
+        //     return -1;
+        // }
+
         let elapasedTime = 0;
 
         while (this.isDifferent(before)) {
@@ -53,11 +59,33 @@ class DateTime {
     addOneDay() {
         this.day += 1;
     }
+
+    isFasterThan111111() {
+        // console.log(other);
+        if (this.day < 11) {
+            return true;
+        }
+
+        if (this.day === 11 && this.hour < 11) {
+            return true;
+        }
+
+        if (this.day === 11 && this.hour === 11 && this.min < 11) {
+            return true;
+        }
+
+        return false;
+    }
 }
 
 const from = new DateTime(11, 11, 11);
 const to = new DateTime(d, h, m);
+if (to.isFasterThan111111()) {
+    console.log(-1);
+    return;
+}
 
 const result = to.calElapsedTime(from);
+
 
 console.log(result);
