@@ -10,12 +10,6 @@ class DateTime {
     }
 
     calElapsedTime(before) {
-        // const result = this.isFasterThan111111(before);
-        // console.log(result);
-        // if (this.isFasterThan111111(before)) {
-        //     return -1;
-        // }
-
         let elapasedTime = 0;
 
         while (this.isDifferent(before)) {
@@ -61,7 +55,6 @@ class DateTime {
     }
 
     isFasterThan111111() {
-        // console.log(other);
         if (this.day < 11) {
             return true;
         }
