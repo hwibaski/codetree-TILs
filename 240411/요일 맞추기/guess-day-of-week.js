@@ -26,6 +26,11 @@ const dateTime = new DateTime(m2, d2);
 const tmp = standardIsFaster(standard, dateTime);
 const elapsedTime = getElapsedTime(standard, dateTime);
 
+if (elapsedTime === 0) {
+    console.log('Mon');
+    return;
+}
+
 
 if (tmp === true) {
     const day = calDayOfWeek(elapsedTime);
