@@ -26,6 +26,8 @@ const dateTime = new DateTime(m2, d2);
 const tmp = standardIsFaster(standard, dateTime);
 const elapsedTime = getElapsedTime(standard, dateTime);
 
+
+
 if (elapsedTime === 0) {
     console.log('Mon');
     return;
@@ -53,7 +55,10 @@ function tempCalc(elapsedTime) {
 function calDayOfWeek(elapsedTime) {
     // const copyElapsedTime = elapsedTime;
 
+    // console.log(elapsedTime);
     const temp = elapsedTime % 7;
+
+    // console.log(temp);
 
     const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
@@ -105,8 +110,12 @@ function getElapsedTime(a, b) {
 
         const maxDays = days[faster.month - 1];
 
+        // console.log(faster);
+        // console.log('here')
+
         if (faster.day === maxDays) {
-            faster.day = 1;
+            // console.log(faster)
+            faster.day = 0;
             faster.month = ++faster.month;
         }
     }
