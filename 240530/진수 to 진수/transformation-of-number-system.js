@@ -20,9 +20,10 @@ function convertBaseWithoutParseInt(a, b, n) {
     let decimalValue = 0;  // 변환된 10진수 값을 저장할 변수 초기화
     let power = 1;         // 현재 자리수의 가중치 (a의 거듭제곱)
 
+    // a 진수로 표현된 어떤 수 n을 10진수로 변환하는 과정
     // n 문자열의 각 자리를 역순으로 처리
     for (let i = n.length - 1; i >= 0; i--) {
-        decimalValue += (n[i] - '0') * power;  // 현재 자리의 값 * 현재 자리의 가중치를 더함
+        decimalValue += Number(n[i]) * power;  // 현재 자리의 값 * 현재 자리의 가중치를 더함
         power *= a;  // 다음 자리로 이동할 때 가중치를 a배 증가시킴
     }
 
