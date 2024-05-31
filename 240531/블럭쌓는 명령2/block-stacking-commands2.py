@@ -6,7 +6,7 @@ for el in arr:
     start = el[0]
     end = el[1]
     
-    for i in range(start, end + 1):
+    for i in range(start-1, end):
         block[i] += 1
 
 
