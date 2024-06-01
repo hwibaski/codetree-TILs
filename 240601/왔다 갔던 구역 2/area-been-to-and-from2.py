@@ -8,7 +8,7 @@ for cmd in cmds:
     direction = cmd[1]
 
     if direction == 'R':
-        for i in range(cur, cur+power-):
+        for i in range(cur, cur+power):
             
             block[i] += 1
         cur += power
