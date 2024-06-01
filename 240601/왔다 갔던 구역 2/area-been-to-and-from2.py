@@ -22,7 +22,6 @@ for _ in range(n):
 	segments.append([section_left, section_right])
 
 checked = [0] * (MAX_R + 1)
-print(segments)
 for x1, x2 in segments:
     
 	# OFFSET을 더해줍니다.
