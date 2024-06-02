@@ -44,19 +44,23 @@ for j in range(n):
 
 	# if j == 4: break 
 	# print("--------------")
+	# print('cur:',cur)
 	# for b in blocks:
 	# 	print(b.pos, b.color)
 	
 
 	if direction == 'L':
-		for pos in range(cur - 1, cur - distance - 1, -1):
+		
+		for pos in range(cur, cur - distance, -1):
 			blocks[pos].setWhiteColor()
 		cur -= distance
+		cur += 1
 
 	else:
 		for pos in range(cur, cur + distance):
 			blocks[pos].setBlackColor()
 		cur += distance
+		cur -= 1
 
 # for b in blocks:
 # 	print(b.pos, b.color)
