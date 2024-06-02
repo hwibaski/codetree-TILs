@@ -1,6 +1,6 @@
 n = int(input())
-block = [[0 for j in range(10)] for i in range(10)]
-center = len(block)
+block = [[0 for j in range(100)] for i in range(100)]
+
 for _ in range(n):
     x1, y1, x2, y2 = tuple(map(int, input().split()))
 
