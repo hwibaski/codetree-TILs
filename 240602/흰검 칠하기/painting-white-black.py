@@ -31,13 +31,13 @@ class Block:
             self.color = "white"
             self.white_cnt += 1
 
-for i in range(20):
+for i in range(100000):
     blocks.append(Block(i))
 
 n = int(input())
 segments = []
 
-cur = 20 // 2
+cur = 100000 // 2
 for j in range(n):
 	distance, direction = tuple(input().split())
 	distance = int(distance)
