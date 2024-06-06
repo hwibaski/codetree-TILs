@@ -5,13 +5,13 @@ OFFSET = 1000
 block = [[0 for _ in range(OFFSET + 1000)] for _ in range(OFFSET + 1000)]
 
 # a 렌더링
-for x in range(ax1, ax2):
-    for y in range(ay1, ay2):
+for x in range(ax1+OFFSET, ax2+OFFSET):
+    for y in range(ay1+OFFSET, ay2+OFFSET):
         block[x][y] = 1
 
 # b 렌더링
-for x in range(bx1, bx2):
-    for y in range(by1, by2):
+for x in range(bx1+OFFSET, bx2+OFFSET):
+    for y in range(by1+OFFSET, by2+OFFSET):
         block[x][y] = 2
 
 # 면적 체크
