@@ -17,6 +17,7 @@ for x in range(bx1+OFFSET, bx2+OFFSET):
 # 면적 체크
 x1 = 2000; y1 = 2000
 x2 = 0; y2 = 0
+cnt = 0
 for x, line in enumerate(block):
     for y, el in enumerate(line):
         if el == 1:
@@ -24,5 +25,9 @@ for x, line in enumerate(block):
             y1 = min(y, y1)
             x2 = max(x+1, x2)
             y2 = max(y+1, y2)
+            cnt += 1
 
-print((x2-x1) * (y2-y1))
+if cnt == 0:
+    print(0)
+else:
+    print((x2-x1) * (y2-y1))
