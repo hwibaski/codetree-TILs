@@ -3,36 +3,23 @@ N, M = map(int, input().split())
 a_checked = [0] * 1_000_000
 b_checked = [0] * 1_000_000
 
+time_a = 1
 for _ in range(N):
-    direction, d = input().split()
-    distance = int(d)
+    d, t = tuple(input().split())
+    for _ in range(int(t)):
+        a_checked[time_a] = a_checked[time_a - 1] + (1 if d == 'R' else -1)
+        time_a += 1
+            
 
-    cur = 0
-    if direction == 'R':
-        for second in range(distance):
-            cur += 1
-            a_checked[second] = cur
-    else:
-        for second in range(distance):
-            cur -= 1
-            a_checked[second] = cur
-
+time_b = 1
 for _ in range(M):
-    direction, d = input().split()
-    distance = int(d)
-
-    cur = 0
-    if direction == 'R':
-        for second in range(distance):
-            cur += 1
-            a_checked[second] = cur
-    else:
-        for second in range(distance):
-            cur -= 1
-            a_checked[second] = cur
-
+    d, t = tuple(input().split())
+    for _ in range(int(t)):
+        b_checked[time_b] = b_checked[time_b - 1] + (1 if d == 'R' else -1)
+        time_b += 1
+            
 answer = -1
-for s in range(1_000_000):
+for s in range(1, 1_000_000):
     if a_checked[s] == b_checked[s]:
         answer = s
         break
