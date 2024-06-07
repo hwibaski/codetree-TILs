@@ -3,6 +3,10 @@ nums = list(map(int, input().split()))
 
 ans = 0
 cnt = 0
+
+if n == 1 and nums[0] > t:
+    ans += 1
+
 for i in range(n):
     # if nums[i] < t:
     #     continue
