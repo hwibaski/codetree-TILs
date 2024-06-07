@@ -14,7 +14,20 @@ for i in range(n):
         cnt += 1
     else:
         cnt = 0
-    # print(i , nums[i], cnt, ans)
     ans = max(cnt, ans)
 
 print(ans)
+
+
+# ans, cnt = 0, 0
+# for i in range(n):
+#     # Case 1
+#     if arr[i] > t:
+#         cnt += 1
+#     # Case 2
+#     else:
+#         cnt = 0
+    
+#     ans = max(ans, cnt)
+
+# print(ans)
