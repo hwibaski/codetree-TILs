@@ -12,6 +12,8 @@ for i in range(n):
     #     continue
     if i > 0 and nums[i] > t and nums[i] > nums[i - 1]:
         cnt += 1
+    elif i == 0 and nums[i] > t:
+        cnt += 1
     else:
         cnt = 0
     # print(i , nums[i], cnt, ans)
