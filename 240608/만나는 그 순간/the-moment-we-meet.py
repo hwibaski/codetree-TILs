@@ -19,7 +19,7 @@ for _ in range(M):
         time_b += 1
             
 answer = -1
-for s in range(1, 1_000_000):
+for s in range(1, time_a):
     if a_checked[s] == b_checked[s]:
         answer = s
         break
