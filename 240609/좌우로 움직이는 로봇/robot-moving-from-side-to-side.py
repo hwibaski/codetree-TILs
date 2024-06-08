@@ -11,12 +11,13 @@
 # 위치가 같은 곳을 찾는다.
 # 같은 곳 바로 직전에 값이 다른지 확인
 
+offset = 1_000_000
 n, m = map(int, input().split())
-a_rec, b_rec = [0] * 1_000_000, [0] * 1_000_000
+a_rec, b_rec = [0] * (1_000_000+offset), [0] * (1_000_000+offset)
 
 # A
 time_a = 0
-a_pos = 0
+a_pos = offset
 for _ in range(n):
     dis, direction = input().split()
     if direction == 'R':
@@ -36,7 +37,7 @@ time_a += 1
 
 # B
 time_b = 0
-b_pos = 0
+b_pos = offset
 for _ in range(m):
     dis, direction = input().split()
     if direction == 'R':
