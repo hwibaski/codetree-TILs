@@ -1,39 +1,36 @@
 n, m = map(int, input().split())
 
 move = [tuple(map(int, input().split())) for _ in range(n + m)]
-a_records = [0] * 1000
-b_records = [0] * 1000
+a_records = [0] * (1_000_000 + 1)
+b_records = [0] * (1_000_000 + 1)
 
 # a의 진행
 time_a = 1
 for i in range(n):
     velocity, time = move[i]
-    for t in range(time):
+    for _ in range(time):
         a_records[time_a] = a_records[time_a - 1] + velocity
         time_a += 1
 
-# print(a_records)
-
 # b의 진행
 time_b = 1
-for i in range(n, n + m):
+for i in range(n, n+m):
     velocity, time = move[i]
-    for t in range(time):
+    for _ in range(time):
         b_records[time_b] = b_records[time_b - 1] + velocity
         time_b += 1
 
-# print(b_records)
 
 cnt = 0
-first = None
-for i in range(n + m):
+first = 0
+for i in range(1, time_a):
     if a_records[i] > b_records[i]:
-        if first != 'a':
+        if first == 2:
             cnt += 1
-        first = 'a'
+        first = 1
     elif a_records[i] < b_records[i]:
-        if first != 'b':
+        if first == 1:
             cnt += 1
-        first = 'b'
+        first = 2
 
 print(cnt)
