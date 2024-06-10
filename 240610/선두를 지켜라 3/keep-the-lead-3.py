@@ -23,24 +23,25 @@ for _ in range(m):
 # print(a_rec[:20])
 # print(b_rec[:20])
 
-# print(time_a)
-# print(time_b)
-
 r = [1]
 for t in range(1, time_a):
     if a_rec[t] > b_rec[t]:
         r.append(-1)
-        print(-1)
+        # print(-1)
     elif a_rec[t] < b_rec[t]:
         r.append(0)
-        print(0)
+        # print(0)
     else:
         r.append(1)
-        print(1)
+        # print(1)
 
-cnt = 0
+# print(r)
+
+cnt = 1
+cur = r[0]
 for i in range(1, len(r)):
-    if r[i] != r[i-1]:
+    if r[i] != cur:
         cnt += 1
+        cur = r[i]
 
 print(cnt)
