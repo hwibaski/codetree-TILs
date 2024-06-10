@@ -37,8 +37,8 @@ for t in range(1, time_a):
 
 # print(r)
 
-cnt = 1
-cur = r[0]
+cnt = 0
+cur = 3
 for i in range(1, len(r)):
     if r[i] != cur:
         cnt += 1
